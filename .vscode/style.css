@@ -208,7 +208,7 @@ header {
   padding: 20px 40px;
 
   /* léger effet transparent */
-  background: rgba(0, 0, 0, 0.25);
+  background: #2563eb;
 }
 
 .nav-links {
@@ -291,7 +291,7 @@ footer {
   margin-top: auto;
   align-self: flex-start;
   padding: 8px 18px;
-  background: #3b82f6;
+  background: #2563EB;
   color: white;
   border: none;
   border-radius: 6px;
@@ -301,7 +301,7 @@ footer {
 }
 
 .btn-details:hover {
-  background: #2563eb;
+  background: #1d4ed8;
 }
 
 /* =========================
