@@ -1,0 +1,502 @@
+/* ==========================================================
+   Cartes d'événements — mode sombre, thème bleu
+   ========================================================== */
+
+#events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 24px;
+  background-color: #0f1115;
+}
+
+.event-card {
+  background: #1a1d24;
+  border: 1px solid #2a2e38;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+  box-shadow: 0 10px 28px rgba(59, 130, 246, 0.25);
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92);
+}
+
+.event-content {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Titre de l'événement */
+.event-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  line-height: 1.3;
+}
+
+/* Date — première balise <p> */
+.event-content p:first-of-type {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.event-content p:first-of-type strong {
+  font-weight: 600;
+  color: #60a5fa;
+}
+
+/* ============================
+   Description de l'événement
+   ============================ */
+.event-content p:last-of-type {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #9ca3af;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.event-card:hover .event-content p:last-of-type {
+  color: #c2cad6;
+}
+
+/* Responsive : une seule colonne sur mobile */
+@media (max-width: 480px) {
+  #events-container {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .event-card img {
+    height: 200px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================
+   SKIP LINK
+========================= */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* =========================
+   HERO (IMAGE + NAVBAR PAR-DESSUS)
+========================= */
+.hero {
+  min-height: 100vh;
+  background-image: url("ima.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* overlay sombre pour lisibilité */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTON (IMPORTANT -> ton "Explorer")
+========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+
+/* =========================
+   NAVBAR PAR-DESSUS HERO
+========================= */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+/* =========================
+   HEADER / NAVBAR
+========================= */
+header {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+
+  /* léger effet transparent */
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* =========================
+   EVENTS
+========================= */
+.events {
+  padding: 80px 40px;
+}
+
+.events h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.event-card {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.event-card img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.event-content a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: white;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .event-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+/* =========================
+   BOUTON DÉTAILS
+========================= */
+.btn-details {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 8px 18px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.btn-details:hover {
+  background: #2563eb;
+}
+
+/* =========================
+   MODALE
+========================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: #1a1d24;
+  color: #f3f4f6;
+  border-radius: 14px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 24px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #f3f4f6;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.modal-date {
+  color: #60a5fa;
+  margin-bottom: 12px;
+}
+
+.modal-description {
+  line-height: 1.6;
+  color: #c2cad6;
+  white-space: pre-line;
+}
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: end;
+  margin-bottom: 32px;
+  padding: 16px 20px;
+  background: #1a1d24;
+  border-radius: 10px;
+}
+
+.filtre-groupe {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filtre-groupe label {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.filtre-groupe select,
+.filtre-groupe input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #2a2e38;
+  background: #0f1115;
+  color: #f3f4f6;
+}
+
+.btn-reset {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-reset:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+/* =========================
+   PAGE À PROPOS
+========================= */
+/* =========================
+   PAGE À PROPOS — MODE SOMBRE
+========================= */
+.page-sombre {
+  background-color: #0f1115;
+  color: #f3f4f6;
+}
+
+.page-sombre footer {
+  background: #111;
+}
+
+.apropos-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+  text-align: center;
+}
+
+.apropos-intro h1 {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  color: #f3f4f6;
+}
+
+.apropos-intro p {
+  margin-bottom: 16px;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.apropos-events {
+  padding: 40px 40px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.apropos-events h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #f3f4f6;
+}
+
+.event-full {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #1a1d24;
+  border: 1px solid #2a2e38;
+  border-radius: 14px;
+  transition: border-color 0.25s ease;
+}
+
+.event-full:hover {
+  border-color: #3b82f6;
+}
+
+.event-full img {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.event-full-content h3 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: #f3f4f6;
+}
+
+.event-full-meta {
+  color: #60a5fa;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  text-transform: capitalize;
+}
+
+.event-full-description {
+  line-height: 1.6;
+  color: #c2cad6;
+}
+
+@media (max-width: 768px) {
+  .event-full {
+    flex-direction: column;
+  }
+
+  .event-full img {
+    width: 100%;
+    height: 220px;
+  }
+}

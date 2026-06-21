@@ -1,0 +1,161 @@
+//# SASS (style.scss)
+
+//```scss
+// VARIABLES
+$primary-color: #2563EB;
+$secondary-color: #7C3AED;
+$white: #FFFFFF;
+$dark: #111827;
+
+
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: $dark;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+// ACCESSIBILITÉ
+.skip-link {
+  position: absolute;
+  left: -9999px;
+
+  &:focus {
+    left: 10px;
+    top: 10px;
+    background: $white;
+    padding: 1rem;
+    z-index: 1000;
+  }
+}
+
+
+// NAVBAR
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: $white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: $dark;
+    font-weight: 600;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+
+// HERO
+.hero {
+  position: relative;
+}
+
+.hero picture img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+
+// BOUTON
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    90deg,
+    $primary-color,
+    $secondary-color
+  );
+
+  color: $white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+
+// EVENTS
+.events {
+  padding: 4rem 2rem;
+}
+
+.events h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.event-card {
+  margin-bottom: 3rem;
+  border: 1px solid #E5E7EB;
+}
+
+.event-content {
+  padding: 1rem;
+}
+
+.event-content h3 {
+  margin-bottom: 1rem;
+}
+
+.event-content p {
+  margin-bottom: 1rem;
+}
+
+.event-content a {
+  color: $primary-color;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+// FOOTER
+footer {
+  padding: 2rem;
+  text-align: center;
+  background: #F3F4F6;
+}

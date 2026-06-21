@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Villa Nova - Tous les événements à venir.">
+  <title>Villa Nova - Événements</title>
+  <script src="script.js"></script>
+
+  <!-- CSS compilé (le même que index.html) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-sombre">
+
+  <!-- Lien d'évitement accessibilité -->
+  <a href="#contenu" class="skip-link">
+    Aller au contenu principal
+  </a>
+
+  <!-- HEADER -->
+  <header>
+
+    <nav class="navbar" aria-label="Navigation principale">
+
+      <!-- <h2 class="visually-hidden">Menu principal</h2> -->
+
+      <!-- Logo -->
+      <a href="pageAccueil.html" class="logo" aria-label="Accueil Villa Nova">
+        <img
+          src="logo-villanova.webp"
+          alt="Villa Nova - Accueil"
+          width="120"
+          height="60">
+      </a>
+
+      <!-- Navigation -->
+      <ul class="nav-links">
+        <li><a href="pageAccueil.html">Accueil</a></li>
+        <li><a href="evenements.html" aria-current="page">Événements</a></li>
+        <!-- <li><a href="apropos.html">À propos</a></li> -->
+        <!-- <li><a href="favoris.html">Favoris</a></li> -->
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main id="contenu">
+
+    <!-- LISTE DES ÉVÉNEMENTS (uniquement, pas de Hero) -->
+    <section class="events" aria-labelledby="liste-evenements">
+
+      <!-- <h1 id="liste-evenements">Événements à venir</h1> -->
+       <section class="events" aria-labelledby="liste-evenements">
+
+  <!-- FILTRES -->
+  <div class="filtres" aria-label="Filtrer les événements">
+
+    <div class="filtre-groupe">
+      <label for="filtre-categorie">Catégorie</label>
+      <select id="filtre-categorie">
+        <option value="">Toutes</option>
+      </select>
+    </div>
+
+    <div class="filtre-groupe">
+      <label for="filtre-lieu">Lieu</label>
+      <select id="filtre-lieu">
+        <option value="">Tous</option>
+      </select>
+    </div>
+
+    <div class="filtre-groupe">
+      <label for="filtre-date">À partir du</label>
+      <input type="date" id="filtre-date">
+    </div>
+
+    <button id="reset-filtres" type="button" class="btn-reset">Réinitialiser</button>
+  </div>
+
+  <div id="events-container"></div>
+
+</section>
+
+      <div id="events-container"></div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Villa Nova</p>
+  </footer>
+
+</body>
+</html>

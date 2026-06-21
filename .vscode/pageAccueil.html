@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Villa Nova - Découvrez des événements exclusifs dans des lieux d'exception.">
+  <title>Villa Nova - Accueil</title>
+  <script src="script.js"></script>
+
+  <!-- CSS compilé -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Lien d’évitement accessibilité -->
+  <a href="#contenu" class="skip-link">
+    Aller au contenu principal
+  </a>
+
+  <!-- HEADER -->
+  <header>
+
+    <nav class="navbar" aria-label="Navigation principale">
+
+      <!-- <h2 class="visually-hidden">Menu principal</h2> -->
+
+      <!-- Logo -->
+      <a href="pageAccueil.html" class="logo" aria-label="Accueil Villa Nova">
+        <img
+          src="logo-villanova.webp"
+          alt="Villa Nova - Accueil"
+          width="120"
+          height="60">
+      </a>
+
+      <!-- Navigation -->
+      <ul class="nav-links">
+        <li><a href="pageAccueil.html" aria-current="page">Accueil</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <!-- <li><a href="favoris.html">Favoris</a></li> -->
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main id="contenu">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="titre-principal">
+
+  <div class="hero-content">
+
+    <h1 id="titre-principal">Villa Nova</h1>
+
+    <p>Découvrez des événements uniques et vivez l’exception.</p>
+
+    <a href="evenements.html" class="btn">
+      Explorer les événements
+    </a>
+
+  </div>
+
+</section>
+
+
+    <!-- LISTE DES ÉVÉNEMENTS -->
+    <section class="events" aria-labelledby="liste-evenements">
+
+  <h2 id="liste-evenements">Événements à venir</h2>
+
+  <div id="events-container"></div>
+
+</section>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Villa Nova</p>
+  </footer>
+
+</body>
+</html>
