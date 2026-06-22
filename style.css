@@ -1,6 +1,4 @@
-/* ==========================================================
-   Cartes d'événements — mode sombre, thème bleu
-   ========================================================== */
+/* cartes d'événements et mode sombre */
 
 #events-container {
   display: grid;
@@ -65,9 +63,7 @@
   color: #60a5fa;
 }
 
-/* ============================
-   Description de l'événement
-   ============================ */
+/* Description de l'événement */
 .event-content p:last-of-type {
   margin: 0;
   font-size: 0.95rem;
@@ -105,9 +101,7 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   SKIP LINK
-========================= */
+/* skip link */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -122,9 +116,7 @@ body {
   top: 0;
 }
 
-/* =========================
-   HERO (IMAGE + NAVBAR PAR-DESSUS)
-========================= */
+/* HERO (IMAGE + NAVBAR PAR-DESSUS) */
 .hero {
   min-height: 100vh;
   background-image: url("ima.png");
@@ -164,9 +156,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* =========================
-   BUTTON (IMPORTANT -> ton "Explorer")
-========================= */
+/* button explorer
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -182,9 +172,7 @@ body {
   background: #ddd;
 }
 
-/* =========================
-   NAVBAR PAR-DESSUS HERO
-========================= */
+/* navbar par dessus l'image */
 header {
   position: absolute;
   top: 0;
@@ -192,9 +180,7 @@ header {
   width: 100%;
   z-index: 10;
 }
-/* =========================
-   HEADER / NAVBAR
-========================= */
+/* header et navbar fixes pour rester visibles lors du scroll */
 header {
   position: relative;
   width: 100%;
@@ -252,9 +238,7 @@ header {
   left: 0;
 }
 
-/* =========================
-   EVENTS
-========================= */
+/*les events cards*/
 .events {
   padding: 80px 40px;
 }

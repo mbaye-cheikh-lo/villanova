@@ -35,9 +35,7 @@ async function chargerEvenements() {
   }
 }
 
-/* =========================
-   AFFICHAGE DES CARTES
-========================= */
+/* affichage des cartes */
 function afficherEvenements(events) {
   const container = document.getElementById("events-container");
   container.innerHTML = "";
@@ -108,9 +106,7 @@ function afficherEvenements(events) {
   });
 }
 
-/* =========================
-   FILTRES
-========================= */
+/* filtres*/
 function initFiltres(events) {
   const selectCategorie = document.getElementById("filtre-categorie");
   const selectLieu = document.getElementById("filtre-lieu");
@@ -135,7 +131,7 @@ function initFiltres(events) {
     selectCategorie.appendChild(opt);
   });
 
-  // --- Lieux uniques (villes) ---
+  // Lieux uniques (villes) 
   const lieux = new Set();
   events.forEach(e => {
     const ville = e.location?.city;
@@ -149,7 +145,7 @@ function initFiltres(events) {
     selectLieu.appendChild(opt);
   });
 
-  // --- Écouteurs ---
+  // Écouteurs
   [selectCategorie, selectLieu, inputDate].forEach(el => {
     el.addEventListener("change", appliquerFiltres);
   });
@@ -189,9 +185,7 @@ function appliquerFiltres() {
   afficherEvenements(filtres);
 }
 
-/* =========================
-   MODALE DE DÉTAILS
-========================= */
+/* modale de détails */
 function ouvrirModale({ titre, date, image, description }) {
   fermerModale();
 
@@ -236,9 +230,7 @@ function fermerModale() {
     document.removeEventListener("keydown", fermerModaleEchap);
   }
 }
-/* =========================
-   PAGE À PROPOS — DESCRIPTIONS COMPLÈTES
-========================= */
+/* page à propos et descriptions complètes */
 async function chargerEvenementsComplets() {
   const container = document.getElementById("apropos-events-container");
   if (!container) return;
