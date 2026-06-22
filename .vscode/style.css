@@ -205,10 +205,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 5px 40px;
 
   /* léger effet transparent */
-  background: #2563eb;
+  background: white;
 }
 
 .nav-links {
@@ -218,7 +218,7 @@ header {
 }
 
 .nav-links a {
-  color: white;
+  color: #2563eb;
   text-decoration: none;
 }
 
