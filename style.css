@@ -214,18 +214,42 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 28px;
 }
 
 .nav-links a {
+  position: relative;
+  display: inline-block;
+  padding: 6px 2px;
   color: #7c3aed;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  transition: color 0.25s ease;
+}
+
+/* Soulignement animé */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
   color: #2563eb;
-  text-decoration: underline;
+}
+
+.nav-links a:hover::after,
+.nav-links a[aria-current="page"]::after {
+  width: 100%;
+  left: 0;
 }
 
 /* =========================
