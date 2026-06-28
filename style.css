@@ -265,9 +265,7 @@ header {
   text-decoration: none;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* footer */
 footer {
   text-align: center;
   padding: 30px;
@@ -275,9 +273,7 @@ footer {
   color: white;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* la partie responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -293,9 +289,7 @@ footer {
     font-size: 2.2rem;
   }
 }
-/* =========================
-   BOUTON DÉTAILS
-========================= */
+/* bouton détails */
 .btn-details {
   margin-top: auto;
   align-self: flex-start;
@@ -313,9 +307,7 @@ footer {
   background: #1d4ed8;
 }
 
-/* =========================
-   MODALE
-========================= */
+/* modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -412,12 +404,7 @@ footer {
 .btn-reset:hover {
   background: rgba(59, 130, 246, 0.1);
 }
-/* =========================
-   PAGE À PROPOS
-========================= */
-/* =========================
-   PAGE À PROPOS — MODE SOMBRE
-========================= */
+/* page a propos — mode sombre */
 .page-sombre {
   background-color: #0f1115;
   color: #f3f4f6;
